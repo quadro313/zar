@@ -9,6 +9,10 @@
     "build-node": "parcel build entry.js --target node --bundle-node-modules --out-dir dist/node",
     "build-web": "parcel build entry.js --global B --out-dir dist/browser"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quadro313/zar.git"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
