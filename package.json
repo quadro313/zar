@@ -1,0 +1,26 @@
+{
+  "name": "zar",
+  "version": "0.0.1",
+  "description": "An extensive dice library",
+  "main": "entry.js",
+  "scripts": {
+    "serve": "parcel watch entry.js sandbox.js --target node",
+    "start": "node dist/sandbox.js",
+    "build-node": "parcel build entry.js --target node --bundle-node-modules --out-dir dist/node",
+    "build-web": "parcel build entry.js --global B --out-dir dist/browser"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "mathjs": "^6.2.3",
+    "ramda": "^0.26.1",
+    "xregexp": "^4.2.4"
+  }
+}
