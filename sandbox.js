@@ -1,4 +1,4 @@
-import {Dice} from '/entry.js'
+import {Dice, Notations} from '/entry.js'
 
 let d = new Dice([
     {side: 1, value: "cherry", label: "fruit"},
@@ -10,8 +10,9 @@ let d = new Dice([
     {side: 7, value: "pineapple"},
     {side: 8, value: "strawberry"}
 ]);
-d.biasMatrix = [{side: 1, bias: 0.5}, {side: 6, bias: 21}, {side: 20, bias: 0}, {side: -5, bias: 10}, {side: 0, bias: "x"}]
+
 
 console.log(`${d.sides} total sides, ${d.biasWeight} weight`)
 console.log(d.biasMatrix);
 console.log(d.single());
+
