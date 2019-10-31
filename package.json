@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "parcel watch entry.js sandbox.js --target node",
     "start": "node dist/sandbox.js",
-    "build-node": "parcel build entry.js --target node --bundle-node-modules --out-dir dist/node",
+    "build-node": "parcel build entry.js --target node --out-dir dist/node",
     "build-web": "parcel build entry.js --global B --out-dir dist/browser"
   },
   "repository": {
@@ -20,7 +20,8 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/preset-env": "^7.6.3",
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-bundle-visualiser": "^1.2.0"
   },
   "dependencies": {
     "mathjs": "^6.2.3",
