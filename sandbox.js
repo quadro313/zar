@@ -1,18 +1,90 @@
-import {Dice, Notations} from '/entry.js'
+import {
+    Notations
+} from '/entry.js'
+import Dice from './lib/Dice';
 
-let d = new Dice([
-    {side: 1, value: "cherry", label: "fruit"},
-    {side: 2, value: "banana"},
-    {side: 3, value: "grape"},
-    {side: 4, value: "kiwi"},
-    {side: 5, value: "apple"},
-    {side: 6, value: "peach"},
-    {side: 7, value: "pineapple"},
-    {side: 8, value: "strawberry"}
-]);
+let notations = new Notations();
+notations.notations = {
+    name: 'zombie-dice',
+    dice: [{
+            label: 'green',
+            unwrap: true,
+            config: [{
+                    side: 1,
+                    value: 'B',
+                    label: 'brains',
+                    bias: 3
+                },
+                {
+                    side: 2,
+                    value: 'S',
+                    label: 'shotgun',
+                    bias: 1
+                },
+                {
+                    side: 3,
+                    value: 'R',
+                    label: 'runner',
+                    bias: 2
+                }
+            ]
+        },
+        {
+            label: 'yellow',
+            unwrap: true,
+            config: [{
+                    side: 1,
+                    value: 'B',
+                    label: 'brains',
+                    bias: 2
+                },
+                {
+                    side: 2,
+                    value: 'S',
+                    label: 'shotgun',
+                    bias: 2
+                },
+                {
+                    side: 3,
+                    value: 'R',
+                    label: 'runner',
+                    bias: 2
+                }
+            ]
+        },
+        {
+            label: 'red',
+            unwrap: true,
+            config: [{
+                    side: 1,
+                    value: 'B',
+                    label: 'brains',
+                    bias: 1
+                },
+                {
+                    side: 2,
+                    value: 'S',
+                    label: 'shotgun',
+                    bias: 3
+                },
+                {
+                    side: 3,
+                    value: 'R',
+                    label: 'runner',
+                    bias: 2
+                }
+            ]
+        }
+    ]
+};
 
+let d = new Dice(3);
+d.biasMatrix = [3, 2, 3];
+console.log(d.biasedSides);
 
-console.log(`${d.sides} total sides, ${d.biasWeight} weight`)
-console.log(d.biasMatrix);
-console.log(d.single());
+notations.selected = 'zombie-dice';
+let bag = notations.spawnDice('green', 6);
 
+for(let d of bag) {
+    console.log(d.toString());
+}
