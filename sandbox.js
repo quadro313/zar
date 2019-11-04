@@ -78,13 +78,13 @@ notations.notations = {
     ]
 };
 
-let d = new Dice(3);
-d.biasMatrix = [3, 2, 3];
-console.log(d.biasedSides);
+let d = new Dice(4);
+
+console.log(d);
 
 notations.selected = 'zombie-dice';
-let bag = notations.spawnDice('green', 6);
+let bag = notations.spawnDice('green', 1);
 
-for(let d of bag) {
-    console.log(d.toString());
+for(let d1 of bag) {
+    console.log(d1);
 }
