@@ -7,7 +7,7 @@
     "serve": "parcel watch entry.js sandbox.js --target node",
     "start": "node dist/sandbox.js",
     "build-node": "parcel build entry.js --target node --out-dir dist/node",
-    "build-web": "parcel build entry.js --global B --out-dir dist/browser"
+    "build-web": "parcel build entry.js --global zar --out-dir dist/browser"
   },
   "repository": {
     "type": "git",

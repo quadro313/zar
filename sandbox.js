@@ -80,8 +80,6 @@ notations.notations = {
 
 let d = new Dice(4);
 
-console.log(d);
-
 notations.selected = 'zombie-dice';
 let bag = notations.spawnDice('green', 1);
 
