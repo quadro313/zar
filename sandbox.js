@@ -74,15 +74,14 @@ notations.notations = {
                     bias: 2
                 }
             ]
-        }
+        },
+        {label: "numeric"}
     ]
 };
 
-let d = new Dice(4);
-
 notations.selected = 'zombie-dice';
-let bag = notations.spawnDice('green', 1);
+let bag = notations.spawnDice('yellow6', 1);
 
 for(let d1 of bag) {
-    console.log(d1);
+    //console.log(d1);
 }
