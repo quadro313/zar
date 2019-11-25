@@ -10,19 +10,16 @@ notations.notations = {
             label: 'green',
             unwrap: true,
             config: [{
-                    side: 1,
                     value: 'B',
                     label: 'brains',
                     bias: 3
                 },
                 {
-                    side: 2,
                     value: 'S',
                     label: 'shotgun',
                     bias: 1
                 },
                 {
-                    side: 3,
                     value: 'R',
                     label: 'runner',
                     bias: 2
@@ -31,21 +28,18 @@ notations.notations = {
         },
         {
             label: 'yellow',
-            unwrap: true,
+            unwrap: false,
             config: [{
-                    side: 1,
                     value: 'B',
                     label: 'brains',
                     bias: 2
                 },
                 {
-                    side: 2,
                     value: 'S',
                     label: 'shotgun',
                     bias: 2
                 },
                 {
-                    side: 3,
                     value: 'R',
                     label: 'runner',
                     bias: 2
@@ -56,19 +50,16 @@ notations.notations = {
             label: 'red',
             unwrap: true,
             config: [{
-                    side: 1,
                     value: 'B',
                     label: 'brains',
                     bias: 1
                 },
                 {
-                    side: 2,
                     value: 'S',
                     label: 'shotgun',
                     bias: 3
                 },
                 {
-                    side: 3,
                     value: 'R',
                     label: 'runner',
                     bias: 2
@@ -80,8 +71,11 @@ notations.notations = {
 };
 
 notations.selected = 'zombie-dice';
-let bag = notations.spawnDice('yellow6', 1);
+let bag = notations.spawnDice('green', 1);
 
+let rolls = 20;
 for(let d1 of bag) {
-    //console.log(d1);
+    for(let i = 0; i < rolls; i++) {
+        console.log(d1.single());
+    }
 }
