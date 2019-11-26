@@ -1,10 +1,10 @@
 import {
-    Notations
+    DiceManager
 } from '/entry.js'
 import Dice from './lib/Dice';
 
-let notations = new Notations();
-notations.notations = {
+let dm = new DiceManager();
+let zombieNotation = {
     name: 'zombie-dice',
     dice: [{
             label: 'green',
@@ -70,12 +70,11 @@ notations.notations = {
     ]
 };
 
-notations.selected = 'zombie-dice';
-let bag = notations.spawnDice('green', 1);
+dm.addNotation(zombieNotation);
+dm.selectedNotation = 'zombie-dice';
+dm.spawnDice("d10", 10);
 
-let rolls = 20;
-for(let d1 of bag) {
-    for(let i = 0; i < rolls; i++) {
-        console.log(d1.single());
-    }
+for(let i = 0; i < 20; i++) {
+    dm.reroll();
+    console.log(dm.values);
 }

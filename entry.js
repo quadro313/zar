@@ -1,4 +1,4 @@
 import Dice from '/lib/Dice'
-import Notations from '/lib/Notations'
+import DiceManager from '/lib/DiceManager'
 
-export {Dice, Notations}
+export {Dice, DiceManager}
