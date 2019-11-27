@@ -66,15 +66,30 @@ let zombieNotation = {
                 }
             ]
         },
-        {label: "numeric"}
+        {label: "numeric"},
+        {
+            label: "boom",
+            unwrap: true,
+            config: [
+                {
+                    label: "bomb",
+                    value: "@@@",
+                    bias: 1
+                },
+                {
+                    label: "safe",
+                    value: "o",
+                    bias: 5
+                }
+            ]
+        }
     ]
 };
 
 dm.addNotation(zombieNotation);
 dm.selectedNotation = 'zombie-dice';
-dm.spawnDice("d10", 10);
+dm.spawnDice("boom", 10);
 
 for(let i = 0; i < 20; i++) {
     dm.reroll();
-    console.log(dm.values);
 }
