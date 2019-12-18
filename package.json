@@ -24,8 +24,6 @@
     "parcel-plugin-bundle-visualiser": "^1.2.0"
   },
   "dependencies": {
-    "mathjs": "^6.2.3",
-    "ramda": "^0.26.1",
     "xregexp": "^4.2.4"
   }
 }
